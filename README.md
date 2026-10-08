@@ -30,6 +30,20 @@ All content lives in `data/`, no code changes needed:
 - `static/`: the UI. Search scoring runs in `app.js` (tag matches, craving synonyms, price tiers for "cheap" vs "splurge").
 - `app.py`: Flask server. `GET /api/data` serves the notebook; `POST /api/pick` takes the craving and the top matching spot names, loads those spots' notes from disk, and asks Claude (`claude-opus-5-5` by default, override with `JAI_MODEL`) for a 2 to 3 sentence pick.
 
-## Deploy
+## Deploy (Render)
 
-Includes a `Procfile` (`gunicorn app:app`), so it runs as-is on Render, Railway, Heroku, or Fly. Set `ANTHROPIC_API_KEY` in the host's environment settings.
+1. Sign in at [render.com](https://render.com) with GitHub.
+2. **New → Blueprint**, pick this repo. Render reads `render.yaml`.
+3. Paste your `ANTHROPIC_API_KEY` when it asks, then **Apply**.
+
+You get a public `https://jai-food.onrender.com`-style URL, and every push to `main` redeploys. The free plan sleeps after 15 idle minutes, so the first visit after a nap takes ~30 seconds to wake.
+
+### Cost guards
+
+Every AI pick spends API credits, so the server:
+
+- caches picks (same craving + same spots = no new API call),
+- limits each visitor to 30 picks an hour (`JAI_PER_IP_HOURLY`),
+- caps the whole app at 1,000 picks a day (`JAI_DAILY_CAP`).
+
+Over a limit, the search and cards keep working; only the AI blurb pauses. Also set a monthly spend limit in the Anthropic Console under Settings → Limits.
