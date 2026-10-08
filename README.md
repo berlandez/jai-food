@@ -36,7 +36,7 @@ All content lives in `data/`, no code changes needed:
 2. **New → Blueprint**, pick this repo. Render reads `render.yaml`.
 3. Paste your `ANTHROPIC_API_KEY` when it asks, then **Apply**.
 
-You get a public `https://jai-food.onrender.com`-style URL, and every push to `main` redeploys. The free plan sleeps after 15 idle minutes, so the first visit after a nap takes ~30 seconds to wake.
+You get a public `https://jai-food.onrender.com`-style URL, and every push to `main` redeploys. It runs on the Starter plan ($7/mo) so it never sleeps; on the free plan the first visit after 15 idle minutes takes ~30 seconds to wake.
 
 ### Cost guards
 
