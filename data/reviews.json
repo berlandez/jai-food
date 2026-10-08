@@ -1,0 +1,177 @@
+{
+  "outlet_style": {
+    "The Infatuation": "#e0114b",
+    "Michelin Guide": "#c30a1a",
+    "Time Out London": "#e6007e",
+    "Time Out Paris": "#e6007e",
+    "James Beard Foundation": "#7a1f1f",
+    "The San Francisco Standard": "#111111",
+    "J. The Jewish News": "#1a5276",
+    "The Almanac": "#2e7d32",
+    "SF Chronicle": "#111111"
+  },
+  "reviews": {
+    "Goodtime Bar": [
+      {
+        "outlet": "SF Chronicle",
+        "score": "Reviewed",
+        "url": "https://www.sfchronicle.com/food/wine/article/goodtime-bar-san-jose-20253561.php"
+      }
+    ],
+    "San Ho Won": [
+      {
+        "outlet": "The Infatuation",
+        "score": "9.5",
+        "dishes": "Double-Cut Galbi, Spicy Chicken Tteokbokki, Galbi Mandu",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/san-ho-won"
+      },
+      {
+        "outlet": "Michelin Guide",
+        "score": "One Star",
+        "dishes": "Pork jowl, aged kimchi jjigae",
+        "url": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/san-ho-won"
+      }
+    ],
+    "Jules": [
+      {
+        "outlet": "The Infatuation",
+        "score": "8.8",
+        "dishes": "Drunken Sailor, Spicy Ronny, Fun Guy",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/jules-fillmore-st"
+      }
+    ],
+    "R&G Lounge": [
+      {
+        "outlet": "The Infatuation",
+        "score": "8.4",
+        "dishes": "Salt and Pepper Crab, R&G Special Beef, Peking Duck",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/r-g-lounge"
+      }
+    ],
+    "Bubbelah": [
+      {
+        "outlet": "J. The Jewish News",
+        "score": "Feature",
+        "dishes": "Matzah ball soup, falafel, khachapuri",
+        "url": "https://jweekly.com/2025/08/06/bubbelah-chef-turns-the-traditional-matzah-ball-on-its-head-in-menlo-park/"
+      }
+    ],
+    "Breadbelly": [
+      {
+        "outlet": "The Infatuation",
+        "score": "8.6",
+        "dishes": "Kaya Toast, Char Siu Sando, Biscuit Smash",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/breadbelly"
+      }
+    ],
+    "Mamahuhu": [
+      {
+        "outlet": "The Infatuation",
+        "score": "Unrated",
+        "dishes": "Kung pao chicken, broccoli beef, sweet and sour cauliflower",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/mamahuhu"
+      }
+    ],
+    "Refuge": [
+      {
+        "outlet": "The San Francisco Standard",
+        "score": "Feature",
+        "dishes": "Hot pastrami sandwich, pastrami steak",
+        "url": "https://sfstandard.com/2023/05/01/the-best-pastrami-in-the-bay-this-michelin-trained-gastropub-invites-you-to-be-the-judge/"
+      }
+    ],
+    "Stateline Road Smokehouse": [
+      {
+        "outlet": "James Beard Foundation",
+        "score": "2025 Semifinalist",
+        "list": "Best Chef: California, Chef Darryl Bell",
+        "url": "https://www.jamesbeard.org/stories/the-2025-james-beard-award-semifinalists"
+      },
+      {
+        "outlet": "The Infatuation",
+        "dishes": "Burnt ends, baby back ribs, brisket",
+        "url": "https://www.theinfatuation.com/napa/reviews/stateline-road-smokehouse"
+      }
+    ],
+    "Valley Bar & Bottle": [
+      {
+        "outlet": "The Infatuation",
+        "dishes": "Braised lamb, fried artichokes, steelhead trout",
+        "url": "https://www.theinfatuation.com/sonoma/reviews/valley-bar-and-bottle-shop"
+      }
+    ],
+    "Café Brusco": [
+      {
+        "outlet": "The Infatuation",
+        "score": "Unrated",
+        "dishes": "Mortadella bagel, burrata and tomato bagel, fig bagel",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/cafe-brusco"
+      }
+    ],
+    "Andytown": [
+      {
+        "outlet": "The Infatuation",
+        "score": "Unrated",
+        "dishes": "Soda-bread scones, the Snowy Plover",
+        "url": "https://www.theinfatuation.com/san-francisco/reviews/andytown"
+      }
+    ],
+    "The Little Store": [
+      {
+        "outlet": "The Almanac",
+        "score": "Feature",
+        "dishes": "Breakfast burrito, buttermilk cheddar sandwich, avocado toast",
+        "url": "https://www.almanacnews.com/woodside/2026/01/28/historic-woodside-restaurant-reopens-as-flower-shop-and-cafe-with-michelin-cred-chef/"
+      }
+    ],
+    "Robert et Louise": [
+      {
+        "outlet": "Time Out Paris",
+        "score": "3/5",
+        "dishes": "Sirloin steak, honeyed duck breast, beef ribs",
+        "url": "https://www.timeout.com/paris/en/restaurants/robert-et-louise"
+      }
+    ],
+    "Padella": [
+      {
+        "outlet": "Michelin Guide",
+        "score": "Bib Gourmand",
+        "url": "https://guide.michelin.com/gb/en/greater-london/london/restaurant/padella"
+      },
+      {
+        "outlet": "The Infatuation",
+        "score": "8.5",
+        "dishes": "Pici cacio e pepe, beef shin ragu pappardelle, burrata",
+        "url": "https://www.theinfatuation.com/london/reviews/padella"
+      },
+      {
+        "outlet": "Time Out London",
+        "score": "4/5",
+        "dishes": "Pici cacio e pepe, 8-hour beef shin ragu",
+        "url": "https://www.timeout.com/london/restaurants/padella"
+      }
+    ],
+    "The Wolseley": [
+      {
+        "outlet": "Time Out London",
+        "score": "#1",
+        "list": "Best London breakfasts, 2026",
+        "dishes": "Omelette Arnold Bennett, kedgeree, creamed porridge",
+        "url": "https://www.timeout.com/london/news/the-fun-art-deco-piccadilly-restaurant-that-serves-the-greatest-breakfast-in-london-right-now-according-to-time-out-013126"
+      },
+      {
+        "outlet": "Michelin Guide",
+        "score": "Listed",
+        "url": "https://guide.michelin.com/us/en/greater-london/london/restaurant/the-wolseley"
+      }
+    ],
+    "Golden Chippy": [
+      {
+        "outlet": "The Infatuation",
+        "score": "Unrated",
+        "dishes": "Cod and chips, skate, halibut",
+        "url": "https://www.theinfatuation.com/london/reviews/the-golden-chippy-greenwich"
+      }
+    ]
+  }
+}

@@ -1,0 +1,551 @@
+[
+  {
+    "name": "Bubbelah",
+    "love": true,
+    "city": "Menlo Park",
+    "hood": "Menlo Park",
+    "cat": "Israeli / mezze",
+    "price": "$$",
+    "tags": [
+      "falafel",
+      "mezze",
+      "hummus",
+      "vegetarian",
+      "israeli",
+      "lunch",
+      "sunny",
+      "veg"
+    ],
+    "take": "Best falafel in the bay. Herbaceous to the max, might as well call em herb. Falls apart, so you know they ain't hiding behind wheat filler. The tahini is unlike any I've had, super fresh. I don't even like babaganoush and theirs was meaty and complex. Sit outside and feel like you're soaking in the sun.",
+    "get": "The falafel, best in the Bay, and the surprisingly meaty babaganoush.",
+    "tip": "Grab a seat outside in the sun."
+  },
+  {
+    "name": "Mamahuhu",
+    "city": "Palo Alto",
+    "hood": "Palo Alto",
+    "cat": "Chinese (casual)",
+    "price": "$$ (~$37)",
+    "tags": [
+      "chinese",
+      "rangoon",
+      "casual",
+      "cheap",
+      "takeout",
+      "snack"
+    ],
+    "take": "Go for the limited Humboldt Fog goat cheese Rangoon. One of the best bites I had all year, a steal at $7, indulgent in the best way, cheese oozing, well-done fry, oil sliding down while the slightly barnyard-y cheese follows. Whole menu punches above its weight. Catch: everything's to-go, pu-erh from a paper cup feels wrong, and it had me craving Mission Chinese for heat.",
+    "get": "The Humboldt Fog goat cheese Rangoon, $7, best bite of the year.",
+    "skip": "Dining-in vibes; it's all to-go and the sweet-sour chicken goes cold.",
+    "tip": "It'll leave you craving Mission Chinese for heat."
+  },
+  {
+    "name": "San Ho Won",
+    "love": true,
+    "city": "SF",
+    "hood": "Mission",
+    "cat": "Korean BBQ",
+    "price": "$$$ (~$134)",
+    "tags": [
+      "korean",
+      "bbq",
+      "galbi",
+      "date",
+      "splurge",
+      "dinner",
+      "meat"
+    ],
+    "take": "The galbi ($68) falls apart gelatinous and sweet, and the kimchi (Jongga collab) is exceptional. Let the grill boy baste, it's like watching an artist paint. The waiter told me to mix the soybean sauce with the house chili oil and damn if he wasn't right. Skip the egg souffle and half the banchan or you hit a wall before the meat. Service is choreographed, everyone in ear pieces like Secret Service.",
+    "get": "The galbi and the Jongga-collab kimchi.",
+    "skip": "The egg souffle and half the banchan, or you wall out before the meat.",
+    "tip": "Mix the soybean sauce with the house chili oil. The waiter's right."
+  },
+  {
+    "name": "Goodtime Bar",
+    "city": "San Jose",
+    "hood": "Fountain Alley",
+    "maps": "https://maps.app.goo.gl/yt7hQHV2SfEzUio38",
+    "cat": "Wine bar / French-ish",
+    "price": "$$",
+    "tags": [
+      "steak",
+      "date",
+      "wine",
+      "bar",
+      "frites",
+      "dinner"
+    ],
+    "take": "Steak frites at $38 is a crazy good deal, and you sop up the bearnaise with the fries till it's gone. Ming behind the bar gave me a taste of the Pinot for no reason. Tinned fish, good dip. The fennel salad was eh. Busy, staff struggling, but it earns the name.",
+    "get": "The $38 steak frites, sopped in the bearnaise.",
+    "skip": "The fennel salad, eh.",
+    "tip": "Staff runs thin, so be patient. The steak's worth it."
+  },
+  {
+    "name": "Refuge",
+    "city": "San Carlos",
+    "hood": "San Carlos",
+    "cat": "Pastrami / deli",
+    "price": "$$",
+    "tags": [
+      "pastrami",
+      "sandwich",
+      "deli",
+      "lunch",
+      "jewish"
+    ],
+    "take": "Third-best pastrami in the bay (Cash Deli Rama and Danny MCF run 1 and 2). The bread's a letdown, lacks the rye taste, and it almost ruins the sandwich, but the pastrami's good. The house black cherry soda is nostalgic and so good, fries crispy and salty. They closed Hillsdale, go to San Carlos.",
+    "get": "The pastrami, third-best in the Bay, and the housemade black cherry soda.",
+    "skip": "The bread, it lacks the rye and nearly sinks the sandwich.",
+    "tip": "Hillsdale closed, go to San Carlos."
+  },
+  {
+    "name": "Jules",
+    "city": "SF",
+    "hood": "SF",
+    "cat": "Pizza",
+    "price": "$$",
+    "tags": [
+      "pizza",
+      "anchovy",
+      "natural-wine",
+      "dinner",
+      "date"
+    ],
+    "take": "Get the Hot Sailor, best pizza on the menu, salinity from the anchovies riding a spicy flavorful sauce. Crust super dank, burnt well done, Tartine-adjacent. The Bulgarian feta salad is bright with toasted cumin seeds, and the grilled cabbage comes almost gochujang and buttered. Hammerling Lambrusco to wash it.",
+    "get": "The Hot Sailor, anchovy salinity on a spicy sauce.",
+    "tip": "Start with the Bulgarian feta salad and the gochujang-buttered cabbage; Hammerling Lambrusco to wash it."
+  },
+  {
+    "name": "Stateline Road Smokehouse",
+    "love": true,
+    "city": "Napa",
+    "hood": "Napa",
+    "cat": "BBQ",
+    "price": "$$ (~$120 feast)",
+    "tags": [
+      "bbq",
+      "burnt-ends",
+      "brisket",
+      "road-trip",
+      "napa",
+      "dinner"
+    ],
+    "take": "The burnt ends ($13 small) are why you go. Meat candy nuggets, Chef Darryl (ex-Bouchon, Alinea, Press) hits the brisket with his 816 sauce, heat and sweet, burns you a little, then the sweet comes back around to make up for it. The Rancho Gordo beans n greens with Nueske bacon melt in your mouth. I ate the leftovers for breakfast two days straight. First Black restaurateur in Napa since the 1800s. Just GO.",
+    "get": "The burnt ends and the Rancho Gordo beans n greens with Nueske bacon.",
+    "tip": "Order extra burnt ends, they're elite next-day breakfast."
+  },
+  {
+    "name": "Breadbelly",
+    "city": "SF",
+    "hood": "SF",
+    "cat": "Cafe / bakery",
+    "price": "$",
+    "tags": [
+      "matcha",
+      "coffee",
+      "bakery",
+      "breakfast",
+      "morning"
+    ],
+    "take": "Best matcha cappuccino around, and FOH with all that milk, I wanna taste my green. Uji matcha, gold-standard terroir, hit with kokuto black sugar for deep caramel without killing the vegetal ooh-mami. Get the Food for Gods, a bite-sized molasses banana-bread-texture thing with walnuts and dates.",
+    "get": "The Uji-matcha cappuccino and the Food for Gods.",
+    "tip": "Ask for less milk so the green comes through."
+  },
+  {
+    "name": "Valley Bar & Bottle",
+    "city": "Sonoma",
+    "hood": "Sonoma",
+    "cat": "Wine bar / patio",
+    "price": "$$",
+    "tags": [
+      "wine",
+      "patio",
+      "natural-wine",
+      "anchovies",
+      "sonoma",
+      "afternoon",
+      "date"
+    ],
+    "take": "One of the few spots in Sonoma Valley pouring minimal-intervention bottles. The patio is the move as spring hits, warm sun on your back and a glass of nectar. Don Bocarte anchovies and the hippie salad with green goddess. The spritz runs on Albet i Noya Petit Albet, Cava with less sulfur.",
+    "get": "The minimal-intervention spritz, Don Bocarte anchovies, the hippie salad.",
+    "tip": "Sit the patio as spring hits."
+  },
+  {
+    "name": "Yo Tambien Cantina",
+    "city": "SF",
+    "hood": "Inner Sunset",
+    "cat": "Venezuelan",
+    "price": "$",
+    "tags": [
+      "venezuelan",
+      "breakfast",
+      "egg-sandwich",
+      "cheap",
+      "casual",
+      "daytime",
+      "hangover"
+    ],
+    "take": "Tiny Venezuelan daytime spot with cactuses and ceramics. The crusty egg sandwich, the Jammy Sammy, with a splash of spicy salsa picante is something I crave. Heartening little place.",
+    "get": "The Jammy Sammy, the crusty egg sandwich, with spicy salsa picante.",
+    "tip": "Daytime only, go for breakfast or lunch."
+  },
+  {
+    "name": "R&G Lounge",
+    "city": "SF",
+    "hood": "Chinatown",
+    "cat": "Cantonese",
+    "price": "$$",
+    "tags": [
+      "chinese",
+      "cantonese",
+      "group",
+      "special-occasion",
+      "chicken",
+      "dinner"
+    ],
+    "take": "Order the lo mei gai in advance ($55): a large deboned chicken stuffed with Chinese sausage, veg, and glutinous rice, then fried whole. Gather your group and plan ahead, this isn't a walk-in dish.",
+    "get": "The lo mei gai, deboned chicken stuffed with sausage and glutinous rice, fried whole.",
+    "tip": "Order the lo mei gai in advance and bring a group."
+  },
+  {
+    "name": "Michael's Bagels",
+    "city": "Queens, NYC",
+    "hood": "Forest Hills, Ascan Ave",
+    "cat": "Bagels",
+    "price": "$",
+    "tags": [
+      "bagel",
+      "nyc",
+      "breakfast",
+      "queens",
+      "nostalgia"
+    ],
+    "take": "Pumpernickel, untoasted (duh), cream cheese and chives. This is the bagel I'd crack open the Sunday Times with. A bagel that tastes like a bagel, not a restaurant's idea of one.",
+    "get": "Pumpernickel with cream cheese and chives.",
+    "tip": "Untoasted. Duh."
+  },
+  {
+    "name": "Timothy Adams Chocolates",
+    "city": "Bay Area",
+    "hood": "Bay Area",
+    "cat": "Dessert / ice cream",
+    "price": "$",
+    "tags": [
+      "dessert",
+      "ice-cream",
+      "chocolate",
+      "sweet",
+      "snack"
+    ],
+    "take": "Passion fruit ice cream with dark and ivory chocolate shavings. Tastes like fresh passion fruit juice, slightly tart, the rich chocolate contrasting nice. Fresh and refreshing.",
+    "get": "The passion fruit ice cream with dark and ivory chocolate shavings."
+  },
+  {
+    "name": "Café Brusco",
+    "city": "Berkeley",
+    "hood": "Berkeley",
+    "cat": "Cafe / bagel",
+    "price": "$",
+    "tags": [
+      "bagel",
+      "coffee",
+      "breakfast",
+      "chai",
+      "morning"
+    ],
+    "take": "The fennel-orange bagel tastes like bread, not a bagel, but the basil and olive oil are fresh and the salt's perfect, and I'm a sucker for fennel-orange. More a restaurant's bagel than a bagel shop's. Walk to Saul's after for matzo brei, or Ealaichi for a warming masala chai in clay cups.",
+    "get": "The fennel-orange bagel, basil, olive oil, perfect salt.",
+    "skip": "Don't expect a true bagel, it reads more like bread.",
+    "tip": "Walk to Saul's after for matzo brei, or Ealaichi for masala chai."
+  },
+  {
+    "name": "Andytown",
+    "city": "Menlo Park",
+    "hood": "Menlo Park",
+    "cat": "Coffee",
+    "price": "$",
+    "tags": [
+      "coffee",
+      "tea",
+      "cafe",
+      "morning"
+    ],
+    "take": "Lyons tea au lait with brown sugar, light sweet, though they under-brewed it so it came too milky. The scallion-cheddar scone would slap if they folded it into scallion-pancake dough. They wouldn't make me a breve, said the cream messes the machine, which another barista told me isn't true.",
+    "get": "The Lyons tea au lait, brown sugar, light sweet.",
+    "skip": "The scallion-cheddar scone (needs scallion-pancake dough to slap).",
+    "tip": "Ask them to steep the tea longer, it comes too milky. The no-breve excuse doesn't hold up."
+  },
+  {
+    "name": "The Little Store",
+    "city": "Woodside",
+    "hood": "Woodside",
+    "cat": "Cafe / brunch",
+    "price": "$$",
+    "tags": [
+      "brunch",
+      "coffee",
+      "woodside",
+      "people-watching",
+      "breakfast"
+    ],
+    "take": "The avo toast was bland and not warm enough. But the apple cake is perfect, lots of apples, warming spices, not too sweet, moist and spongey, and the rose latte's nice and hot. Come for the cake and the rich-Woodside people-watching, yentas off to crystal healing and Pilates.",
+    "get": "The apple cake, warming spices, not too sweet, and the rose latte.",
+    "skip": "The avocado toast, bland and under-warm.",
+    "tip": "Come for the cake and the rich-Woodside people-watching."
+  },
+  {
+    "name": "Robert et Louise",
+    "city": "Paris",
+    "hood": "Le Marais",
+    "cat": "French",
+    "price": "$$",
+    "tags": [
+      "paris",
+      "french",
+      "steak",
+      "cote-de-boeuf",
+      "travel",
+      "dinner"
+    ],
+    "take": "Cote de boeuf over the fire. Sit upstairs, not the basement, it gets hot down there, and tell them you want it cooked past the too-raw medium-rare they default to. Old-school and worth it if you play it right.",
+    "get": "The côte de boeuf over the fire.",
+    "tip": "Sit upstairs, not the basement (it gets hot), and tell them to cook it past the too-raw default."
+  },
+  {
+    "name": "Miznon",
+    "city": "Paris",
+    "hood": "Paris",
+    "cat": "Israeli / pita",
+    "price": "$",
+    "tags": [
+      "paris",
+      "falafel",
+      "pita",
+      "israeli",
+      "travel",
+      "cheap"
+    ],
+    "take": "Skip L'As du Fallafel, that was eh. Miznon's the better move per Anthony at No Diet Club. Pita stuffed right.",
+    "get": "The stuffed pita.",
+    "tip": "Skip L'As du Fallafel, that was eh. Miznon's the better move."
+  },
+  {
+    "name": "Padella",
+    "city": "London",
+    "hood": "Borough",
+    "cat": "Pasta",
+    "price": "$",
+    "tags": [
+      "london",
+      "pasta",
+      "cacio-e-pepe",
+      "cheap",
+      "travel"
+    ],
+    "take": "The pici cacio e pepe. Hand-rolled, peppery, cheap, and the line moves. One of those London musts that actually earns it.",
+    "get": "The pici cacio e pepe and the 8-hour beef shin ragu.",
+    "tip": "Cheap and the line moves, worth the wait."
+  },
+  {
+    "name": "The Wolseley",
+    "city": "London",
+    "hood": "London",
+    "cat": "Grand cafe",
+    "price": "$$",
+    "tags": [
+      "london",
+      "breakfast",
+      "brunch",
+      "eggs",
+      "travel",
+      "fancy"
+    ],
+    "take": "The omelette Arnold Bennett, a rich buttery hollandaise base with smoked haddock, chives, and parmesan. Have it in a grand room that makes breakfast feel like an occasion.",
+    "get": "The omelette Arnold Bennett.",
+    "tip": "Go for breakfast in the grand room, it makes a meal an occasion."
+  },
+  {
+    "name": "Golden Chippy",
+    "city": "London",
+    "hood": "Greenwich",
+    "cat": "Fish & chips",
+    "price": "$",
+    "tags": [
+      "london",
+      "fish-and-chips",
+      "cheap",
+      "travel"
+    ],
+    "take": "Best fish and chips going. No frills, just the platonic chippy.",
+    "get": "The cod and chips."
+  },
+  {
+    "name": "Rintaro",
+    "city": "SF",
+    "hood": "Mission",
+    "cat": "Japanese / izakaya",
+    "price": "$$$",
+    "tags": [
+      "japanese",
+      "izakaya",
+      "yakitori",
+      "dinner",
+      "date",
+      "skewers",
+      "meat"
+    ],
+    "take": "Yakitori with real char, where the burnt bits are the best caramelization by fire. Get the negima, charcoal chicken thigh and onion. And nothing beats dunking scalding chicken meatballs into raw egg yolk. Visceral, primal, chicken and the egg.",
+    "get": "The negima and the chicken meatballs in raw egg yolk.",
+    "tip": "The charred, burnt bits are the best part."
+  },
+  {
+    "name": "Shoji",
+    "city": "SF",
+    "hood": "SF",
+    "cat": "Japanese cocktail bar",
+    "price": "$$$",
+    "tags": [
+      "cocktails",
+      "bar",
+      "japanese",
+      "date",
+      "drinks",
+      "dinner"
+    ],
+    "take": "Sit with Benjamin and order the house martini, Nikka gin aged in apple-juice barrels so it carries a Froot Loops nose, evened out with cherry blossom and barley shochu. The senbei is the sleeper. Get the chicken sando over the burger, pillow-soft bread, vinegar hot sauce. Service can swing from five-star to rushed and impatient, so catch it right.",
+    "get": "The house martini (Nikka gin, Froot Loops nose) and the senbei.",
+    "tip": "Chicken sando over the burger. Service swings, so catch Benjamin on a good night."
+  },
+  {
+    "name": "Loquat Bakery",
+    "love": true,
+    "city": "Oakland",
+    "hood": "Oakland",
+    "cat": "Levantine bakery",
+    "price": "$$",
+    "tags": [
+      "bakery",
+      "israeli",
+      "levantine",
+      "breakfast",
+      "vegetarian",
+      "veg",
+      "pastry"
+    ],
+    "take": "Get the kubaneh platter: housemade tahini, amba made with preserved lemon that's the best rendition I've had, schug, labneh silky and creamy. The cinnamon rugelach is pillowy instead of dry, unlike any I've had. Jules did pop-ups here before going brick and mortar.",
+    "get": "The kubaneh platter (amba, best I've had) and the pillowy cinnamon rugelach."
+  },
+  {
+    "name": "Pasta Supply Co",
+    "city": "SF",
+    "hood": "Mission",
+    "cat": "Italian",
+    "price": "$$",
+    "tags": [
+      "italian",
+      "pasta",
+      "meatballs",
+      "wine",
+      "dinner",
+      "casual"
+    ],
+    "take": "Pretty good meatballs, hot and well-sauced and juicy, a little pink in the middle, salinity from fresh tomatoes. They use Bianco DiNapoli, which signals they buy good stuff. Bread's loaded with olive oil. A glass of Nebbiolo paired nice. Stay for gelato and espresso after.",
+    "get": "The meatballs, hot and juicy (they use Bianco DiNapoli).",
+    "tip": "Stay for gelato and espresso after."
+  },
+  {
+    "name": "Ealaichi",
+    "city": "Berkeley",
+    "hood": "Berkeley",
+    "cat": "Chai / cafe",
+    "price": "$",
+    "tags": [
+      "chai",
+      "tea",
+      "coffee",
+      "cafe",
+      "morning"
+    ],
+    "take": "One of my favorite chai spots, now doing six varieties including pumpkin. Get the masala chai: warming, a subtle hint of cardamom and pepper rather than a punch, and the clay cups hold the heat right.",
+    "get": "The masala chai in the clay cups.",
+    "tip": "Six varieties now, including pumpkin."
+  },
+  {
+    "name": "Zorek",
+    "city": "San Bruno",
+    "hood": "San Bruno",
+    "cat": "Levantine cafe / bakery",
+    "price": "$$",
+    "tags": [
+      "borek",
+      "bakery",
+      "mediterranean",
+      "levantine",
+      "pastry",
+      "breakfast",
+      "veg",
+      "vegetarian"
+    ],
+    "take": "Warm Mediterranean service, there's a woman who goes around thanking guests. The Spinach Feta borek is the best I've had in the Bay, flaky and worth it even at a steep $16 for four pieces.",
+    "get": "Spinach Feta borek, the best in the Bay",
+    "skip": "The coffee. The pistachio latte is all milk, the espresso pulls acidic, and the Americano came as a shot with a side of hot water.",
+    "tip": "Don't pay $6 for the 16oz Saratoga sparkling water, that's a $5 markup. Come for the borek, get your coffee elsewhere."
+  },
+  {
+    "name": "Goodthing",
+    "city": "SF",
+    "hood": "Outer Sunset",
+    "cat": "Cafe / dessert",
+    "price": "$$",
+    "tags": [
+      "coffee",
+      "cafe",
+      "dessert",
+      "cheesecake",
+      "pourover",
+      "breakfast",
+      "pastry"
+    ],
+    "take": "Japanese sweet-cheese clouds: creamy chiffon layers made with Hokkaido A2 milk, delicate and silky. I walked in a pourover skeptic and might've walked out a convert.",
+    "get": "The Japanese chiffon cheesecake, and the La Pachuca pourover (red fruit, pineapple, chocolate).",
+    "tip": "The La Pachuca pourover runs $10. Worth it once for the notes."
+  },
+  {
+    "name": "Le Marais Bakery",
+    "city": "SF",
+    "hood": "Castro, 18th & Sanchez",
+    "cat": "French bakery",
+    "price": "$$",
+    "tags": [
+      "bakery",
+      "french",
+      "pastry",
+      "breakfast",
+      "tart",
+      "brunch"
+    ],
+    "take": "A sun-filled, classic Parisian bistro room on the corner of 18th and Sanchez, gypsy jazz on the speakers.",
+    "get": "The pear-almond tart (tarte Bourdaloue), custardy frangipane with subtly sweet pears.",
+    "skip": "The omelette Parisian. The eggs came out like an American diner, way too well done."
+  },
+  {
+    "name": "Saint Frank Coffee",
+    "love": true,
+    "city": "Menlo Park",
+    "hood": "Menlo Park",
+    "cat": "Coffee",
+    "price": "$$",
+    "tags": [
+      "coffee",
+      "cafe",
+      "espresso",
+      "cappuccino",
+      "morning",
+      "patio"
+    ],
+    "take": "Sunny patio over the Menlo Park Caltrain, the jetsetting VC crowd trading lines about undersubscribed rounds. Feels very European, a little sceney, and the coffee delivers.",
+    "get": "The competition-style cappuccino (dine-in): a bright fruity espresso shot, then A2 milk fortified with sweet coconut milk, then the cappuccino. A perfect jumpstart.",
+    "skip": "The mocha. Diluted, barely tastes of coffee or chocolate.",
+    "tip": "Competition-style is dine-in only, and you carry your own trio to the table."
+  }
+]

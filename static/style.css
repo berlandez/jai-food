@@ -1,0 +1,70 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: #f6f3ec; color: #1c1a17;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 28px 20px 64px; }
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px; margin: 0 0 6px; letter-spacing: -0.5px;
+}
+header p.tag { margin: 0 0 4px; font-size: 16px; color: #4a463f; }
+header p.sub { margin: 0 0 22px; font-size: 13px; color: #8a8478; }
+.bar { display: flex; gap: 10px; margin-bottom: 12px; align-items: center; }
+.who { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 19px; color: #c2410c; white-space: nowrap; }
+#q {
+  flex: 1; padding: 13px 15px; font-size: 16px; border: 1.5px solid #d8d2c4;
+  border-radius: 10px; background: #fff; color: #1c1a17; outline: none;
+}
+#q:focus { border-color: #c2410c; }
+#go {
+  padding: 13px 18px; font-size: 16px; font-weight: 600; border: none; cursor: pointer;
+  border-radius: 10px; background: #c2410c; color: #fff;
+}
+#go:active { transform: translateY(1px); }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 26px; }
+.chip {
+  font-size: 13px; padding: 6px 11px; border-radius: 999px; cursor: pointer;
+  background: #ece7db; border: 1px solid #ddd6c6; color: #3a362f;
+}
+.chip:hover { background: #e3dcca; }
+.note { font-size: 13px; color: #8a8478; margin: 0 0 18px; }
+.pick {
+  background: #fffdf8; border: 1px solid #e6dfcf; border-left: 4px solid #c2410c;
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 14px;
+}
+.pick .blurb { font-size: 16px; line-height: 1.55; white-space: pre-wrap; }
+.pick .src { font-size: 12px; color: #8a8478; margin-top: 10px; }
+.pickhead { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; color: #c2410c; font-weight: 700; margin-bottom: 7px; }
+.card {
+  background: #fff; border: 1px solid #e6dfcf; border-radius: 12px;
+  padding: 14px 16px; margin-bottom: 12px;
+}
+.card h3 { margin: 0 0 2px; font-size: 18px; font-family: Georgia, serif; }
+.card .meta { font-size: 12.5px; color: #8a8478; margin-bottom: 8px; }
+.card .meta b { color: #c2410c; font-weight: 600; }
+.loc { color: #c2410c; text-decoration: none; border-bottom: 1px dotted #d8a08a; }
+.loc:hover { border-bottom-style: solid; }
+.card .take { font-size: 14.5px; color: #2b2823; }
+.badges { margin-top: 9px; display: flex; flex-wrap: wrap; gap: 5px; }
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #f0ebdf; color: #6a6458; }
+.reviews { margin-top: 11px; border-top: 1px dashed #e6dfcf; padding-top: 9px; }
+.rhead { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #9a9488; margin-bottom: 7px; }
+.review { margin-bottom: 10px; }
+.outlet { font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; font-size: 11.5px; color: #1c1a17; }
+.score { display: inline-block; font-size: 11px; font-weight: 700; color: #fff; background: #c2410c; border-radius: 6px; padding: 1px 7px; margin-left: 5px; vertical-align: middle; }
+.rblurb { font-size: 13.5px; color: #2b2823; margin-top: 3px; font-style: italic; }
+.rlink { font-style: normal; color: #c2410c; text-decoration: none; font-size: 12px; }
+.rlist { font-size: 12px; color: #8a8478; margin-top: 2px; }
+.dishes { font-size: 12.5px; color: #2b2823; margin-top: 4px; }
+.dishes b { color: #6a6458; font-weight: 600; }
+.score.muted { background: #e6dfcf; color: #6a6458; }
+.gst { font-size: 12.5px; margin-top: 5px; }
+.get { color: #2e7d32; } .get b { color: #2e7d32; }
+.skip { color: #b3402a; } .skip b { color: #b3402a; }
+.tip { color: #7a6a30; } .tip b { color: #7a6a30; }
+.love { display:inline-flex; align-items:center; gap:4px; margin-left:8px; font-family:Georgia,serif; font-size:10.5px; font-weight:700; letter-spacing:0.4px; text-transform:uppercase; color:#b8860b; background:#fff7e6; border:1px solid #f0d99b; border-radius:999px; padding:2px 8px; vertical-align:middle; }
+.loading, .pickloading { font-size: 15px; color: #8a8478; padding: 10px 2px; font-style: italic; }
+footer { margin-top: 30px; font-size: 12px; color: #9a9488; border-top: 1px solid #e0d9c9; padding-top: 14px; }
