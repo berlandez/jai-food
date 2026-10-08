@@ -44,6 +44,6 @@ Every AI pick spends API credits, so the server:
 
 - caches picks (same craving + same spots = no new API call),
 - limits each visitor to 30 picks an hour (`JAI_PER_IP_HOURLY`),
-- caps the whole app at 1,000 picks a day (`JAI_DAILY_CAP`).
+- caps the whole app at 200 picks a day (`JAI_DAILY_CAP`).
 
 Over a limit, the search and cards keep working; only the AI blurb pauses. Also set a monthly spend limit in the Anthropic Console under Settings → Limits.

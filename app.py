@@ -43,7 +43,7 @@ _client = None
 
 # Abuse guards for a public deploy: every pick spends API credits.
 PER_IP_HOURLY = int(os.environ.get("JAI_PER_IP_HOURLY", 30))
-DAILY_CAP = int(os.environ.get("JAI_DAILY_CAP", 1000))
+DAILY_CAP = int(os.environ.get("JAI_DAILY_CAP", 200))
 _hits = defaultdict(deque)
 _day = {"date": None, "count": 0}
 _cache = OrderedDict()
