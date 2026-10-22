@@ -1,0 +1,663 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "chip-pizza",
+      "query": "pizza",
+      "group": "chip",
+      "note": "Jules is the only pizza spot in the notebook.",
+      "exact_set": ["Jules"]
+    },
+    {
+      "id": "chip-korean-bbq-date",
+      "query": "Korean BBQ for a date",
+      "group": "chip",
+      "note": "The craving chip should put San Ho Won first. It is the Korean BBQ spot tagged as a date and a splurge.",
+      "hit_at_1": ["San Ho Won"]
+    },
+    {
+      "id": "chip-hangover-breakfast",
+      "query": "hangover breakfast",
+      "group": "chip",
+      "note": "Yo Tambien Cantina is the only spot tagged hangover, and the note is a breakfast sandwich.",
+      "hit_at_1": ["Yo Tambien Cantina"]
+    },
+    {
+      "id": "chip-cheap-eats",
+      "query": "cheap eats",
+      "group": "chip",
+      "note": "The cheap penalty in score() knocks $$$ spots down. Every candidate should be $ or $$.",
+      "max_tier": 2
+    },
+    {
+      "id": "chip-matcha",
+      "query": "matcha",
+      "group": "chip",
+      "note": "Breadbelly is the only matcha note.",
+      "exact_set": ["Breadbelly"]
+    },
+    {
+      "id": "chip-bagel",
+      "query": "bagel",
+      "group": "chip",
+      "note": "Café Brusco and Michael's Bagels are the two bagel notes. Either order is fine.",
+      "exact_set": ["Café Brusco", "Michael's Bagels"]
+    },
+    {
+      "id": "chip-paris",
+      "query": "Paris",
+      "group": "chip",
+      "note": "Both Paris notes, and no other city.",
+      "exact_set": ["Miznon", "Robert et Louise"],
+      "cities": ["Paris"]
+    },
+    {
+      "id": "chip-london",
+      "query": "London",
+      "group": "chip",
+      "note": "The three London notes, and no other city.",
+      "exact_set": ["Padella", "The Wolseley", "Golden Chippy"],
+      "cities": ["London"]
+    },
+    {
+      "id": "chip-vegetarian",
+      "query": "vegetarian",
+      "group": "chip",
+      "note": "Bubbelah, Loquat Bakery, and Zorek are the vegetarian notes.",
+      "exact_set": ["Bubbelah", "Loquat Bakery", "Zorek"]
+    },
+    {
+      "id": "chip-splurge-dinner",
+      "query": "splurge dinner",
+      "group": "chip",
+      "note": "The three $$$ dinner spots. The splurge bonus should keep $$ spots out.",
+      "exact_set": ["San Ho Won", "Rintaro", "Shoji"],
+      "min_tier": 3
+    },
+    {
+      "id": "city-menlo-park",
+      "query": "Menlo Park",
+      "group": "city",
+      "note": "Bubbelah, Andytown, and Saint Frank Coffee are the Menlo Park notes.",
+      "exact_set": ["Saint Frank Coffee", "Bubbelah", "Andytown"],
+      "cities": ["Menlo Park"]
+    },
+    {
+      "id": "city-palo-alto",
+      "query": "Palo Alto",
+      "group": "city",
+      "note": "Mamahuhu is the only Palo Alto note.",
+      "exact_set": ["Mamahuhu"]
+    },
+    {
+      "id": "city-berkeley",
+      "query": "Berkeley",
+      "group": "city",
+      "note": "Café Brusco and Ealaichi are the Berkeley notes.",
+      "exact_set": ["Café Brusco", "Ealaichi"]
+    },
+    {
+      "id": "city-oakland",
+      "query": "Oakland",
+      "group": "city",
+      "note": "Loquat Bakery is the only Oakland note.",
+      "exact_set": ["Loquat Bakery"]
+    },
+    {
+      "id": "city-napa",
+      "query": "Napa",
+      "group": "city",
+      "note": "Stateline Road Smokehouse is the only Napa note.",
+      "exact_set": ["Stateline Road Smokehouse"]
+    },
+    {
+      "id": "city-sonoma",
+      "query": "Sonoma",
+      "group": "city",
+      "note": "Valley Bar & Bottle is the only Sonoma note.",
+      "exact_set": ["Valley Bar & Bottle"]
+    },
+    {
+      "id": "city-woodside",
+      "query": "Woodside",
+      "group": "city",
+      "note": "The Little Store is the only Woodside note.",
+      "exact_set": ["The Little Store"]
+    },
+    {
+      "id": "city-san-jose",
+      "query": "San Jose",
+      "group": "city",
+      "note": "Goodtime Bar is the only San Jose note.",
+      "exact_set": ["Goodtime Bar"]
+    },
+    {
+      "id": "city-san-bruno",
+      "query": "San Bruno",
+      "group": "city",
+      "note": "Zorek is the only San Bruno note.",
+      "exact_set": ["Zorek"]
+    },
+    {
+      "id": "city-san-carlos",
+      "query": "San Carlos",
+      "group": "city",
+      "note": "Refuge is the only San Carlos note.",
+      "exact_set": ["Refuge"]
+    },
+    {
+      "id": "city-queens",
+      "query": "Queens",
+      "group": "city",
+      "note": "Michael's Bagels is the only Queens note.",
+      "exact_set": ["Michael's Bagels"]
+    },
+    {
+      "id": "city-nyc",
+      "query": "NYC",
+      "group": "city",
+      "note": "The nyc tag on Michael's Bagels is the notebook's New York handle that is long enough to match.",
+      "exact_set": ["Michael's Bagels"]
+    },
+    {
+      "id": "city-bay-area",
+      "query": "Bay Area",
+      "group": "city",
+      "note": "Timothy Adams Chocolates is filed under city Bay Area.",
+      "exact_set": ["Timothy Adams Chocolates"]
+    },
+    {
+      "id": "city-sf",
+      "query": "SF",
+      "group": "city",
+      "note": "San Francisco spots are stored as city SF. This query should return them. It currently cannot: the word scorer ignores tokens of length 3 or less, there is no sf tag, and NYC still works only because Michael's Bagels has an nyc tag.",
+      "cities": ["SF"]
+    },
+    {
+      "id": "city-san-francisco",
+      "query": "San Francisco",
+      "group": "city",
+      "note": "Someone typing the city's full name should get the SF notes. The scorer only reads name, city, hood, category, and take, and those fields never spell San Francisco.",
+      "cities": ["SF"]
+    },
+    {
+      "id": "city-new-york",
+      "query": "New York",
+      "group": "city",
+      "note": "Michael's Bagels is the New York note, filed as Queens, NYC. The words New York share no eligible token with that record. NYC and Queens are labeled separately and should hit.",
+      "include": ["Michael's Bagels"]
+    },
+    {
+      "id": "cuisine-falafel",
+      "query": "falafel",
+      "group": "cuisine",
+      "note": "Bubbelah and Miznon are the falafel notes.",
+      "exact_set": ["Bubbelah", "Miznon"]
+    },
+    {
+      "id": "cuisine-pastrami-top",
+      "query": "pastrami",
+      "group": "cuisine",
+      "note": "Refuge is the pastrami note and should rank first.",
+      "hit_at_1": ["Refuge"]
+    },
+    {
+      "id": "cuisine-pasta-include",
+      "query": "pasta",
+      "group": "cuisine",
+      "note": "Padella and Pasta Supply Co are the pasta notes and both should be candidates.",
+      "include": ["Padella", "Pasta Supply Co"]
+    },
+    {
+      "id": "cuisine-fish-and-chips",
+      "query": "fish and chips",
+      "group": "cuisine",
+      "note": "Golden Chippy is the fish-and-chips note and should rank first.",
+      "hit_at_1": ["Golden Chippy"]
+    },
+    {
+      "id": "cuisine-izakaya",
+      "query": "izakaya",
+      "group": "cuisine",
+      "note": "Rintaro is the only izakaya note.",
+      "exact_set": ["Rintaro"]
+    },
+    {
+      "id": "cuisine-japanese",
+      "query": "Japanese",
+      "group": "cuisine",
+      "note": "Rintaro and Shoji are the Japanese restaurants. Goodthing's note also says the cheesecake is Japanese, so it may come along.",
+      "include": ["Rintaro", "Shoji"]
+    },
+    {
+      "id": "cuisine-chinese",
+      "query": "Chinese",
+      "group": "cuisine",
+      "note": "Mamahuhu and R&G Lounge are the Chinese notes.",
+      "exact_set": ["Mamahuhu", "R&G Lounge"]
+    },
+    {
+      "id": "cuisine-dessert",
+      "query": "dessert",
+      "group": "cuisine",
+      "note": "Timothy Adams Chocolates and Goodthing are the dessert notes.",
+      "exact_set": ["Timothy Adams Chocolates", "Goodthing"]
+    },
+    {
+      "id": "cuisine-steak-top",
+      "query": "steak",
+      "group": "cuisine",
+      "note": "Goodtime Bar (steak frites) or Robert et Louise (côte de boeuf) should rank first.",
+      "hit_at_1": ["Goodtime Bar", "Robert et Louise"]
+    },
+    {
+      "id": "cuisine-wine",
+      "query": "wine",
+      "group": "cuisine",
+      "note": "Every candidate should carry a wine tag.",
+      "require_tag": "wine"
+    },
+    {
+      "id": "cuisine-galbi",
+      "query": "galbi",
+      "group": "cuisine",
+      "note": "San Ho Won is the galbi note.",
+      "exact_set": ["San Ho Won"]
+    },
+    {
+      "id": "cuisine-hummus",
+      "query": "hummus",
+      "group": "cuisine",
+      "note": "Bubbelah is the hummus note.",
+      "exact_set": ["Bubbelah"]
+    },
+    {
+      "id": "cuisine-rangoon",
+      "query": "rangoon",
+      "group": "cuisine",
+      "note": "Mamahuhu is the crab rangoon note.",
+      "exact_set": ["Mamahuhu"]
+    },
+    {
+      "id": "cuisine-cantonese",
+      "query": "cantonese",
+      "group": "cuisine",
+      "note": "R&G Lounge is the Cantonese note.",
+      "exact_set": ["R&G Lounge"]
+    },
+    {
+      "id": "cuisine-borek",
+      "query": "borek",
+      "group": "cuisine",
+      "note": "Zorek is the borek note.",
+      "exact_set": ["Zorek"]
+    },
+    {
+      "id": "cuisine-cocktail",
+      "query": "cocktail",
+      "group": "cuisine",
+      "note": "Shoji is the cocktail-bar note.",
+      "exact_set": ["Shoji"]
+    },
+    {
+      "id": "cuisine-chai",
+      "query": "chai",
+      "group": "cuisine",
+      "note": "Ealaichi is the chai note. Café Brusco's note points there for masala chai and is tagged chai.",
+      "exact_set": ["Ealaichi", "Café Brusco"]
+    },
+    {
+      "id": "cuisine-israeli",
+      "query": "israeli",
+      "group": "cuisine",
+      "note": "Bubbelah, Miznon, and Loquat Bakery are the Israeli notes.",
+      "exact_set": ["Bubbelah", "Miznon", "Loquat Bakery"]
+    },
+    {
+      "id": "cuisine-cheesecake-top",
+      "query": "cheesecake",
+      "group": "cuisine",
+      "note": "Goodthing's note is the Japanese chiffon cheesecake, so it should rank first.",
+      "hit_at_1": ["Goodthing"]
+    },
+    {
+      "id": "cuisine-best-falafel-top",
+      "query": "best falafel",
+      "group": "cuisine",
+      "note": "Bubbelah's note calls its falafel the best in the Bay, so it should rank first.",
+      "hit_at_1": ["Bubbelah"]
+    },
+    {
+      "id": "cuisine-breakfast",
+      "query": "breakfast",
+      "group": "cuisine",
+      "note": "Every candidate should be tagged breakfast. The notebook has more than three, so the cutoff may drop some.",
+      "require_tag": "breakfast"
+    },
+    {
+      "id": "cuisine-brunch",
+      "query": "brunch",
+      "group": "cuisine",
+      "note": "Every candidate should be tagged brunch.",
+      "require_tag": "brunch"
+    },
+    {
+      "id": "cuisine-coffee",
+      "query": "coffee",
+      "group": "cuisine",
+      "note": "Saint Frank Coffee should rank first, and every candidate should be tagged coffee.",
+      "hit_at_1": ["Saint Frank Coffee"],
+      "require_tag": "coffee"
+    },
+    {
+      "id": "cuisine-korean-bbq-top",
+      "query": "korean bbq",
+      "group": "cuisine",
+      "note": "San Ho Won is the Korean BBQ note and should rank first.",
+      "hit_at_1": ["San Ho Won"]
+    },
+    {
+      "id": "cuisine-hangover-top",
+      "query": "hangover",
+      "group": "cuisine",
+      "note": "Yo Tambien Cantina is the only hangover-tagged note and should rank first.",
+      "hit_at_1": ["Yo Tambien Cantina"]
+    },
+    {
+      "id": "false-friend-pastrami",
+      "query": "pastrami",
+      "group": "false-friend",
+      "note": "Robert et Louise is a Paris steak. Its note says to cook the meat past the too-raw default, and the scorer counts any note-word contained in the query, so past hits inside pastrami.",
+      "forbid": ["Robert et Louise"]
+    },
+    {
+      "id": "false-friend-pasta",
+      "query": "pasta",
+      "group": "false-friend",
+      "note": "The same past token is contained in pasta, so Robert et Louise should not sit next to the real pasta spots.",
+      "forbid": ["Robert et Louise"]
+    },
+    {
+      "id": "false-friend-steak",
+      "query": "steak",
+      "group": "false-friend",
+      "note": "Andytown is coffee. Tag hits use query.includes(tag) with no word boundary, and the tag tea is contained in steak.",
+      "forbid": ["Andytown"]
+    },
+    {
+      "id": "false-friend-cheesecake",
+      "query": "cheesecake",
+      "group": "false-friend",
+      "note": "Mamahuhu is casual Chinese. Its tag cheap is contained in cheesecake, which is enough to outrank spots that only mention cake.",
+      "forbid": ["Mamahuhu"]
+    },
+    {
+      "id": "false-friend-hangover",
+      "query": "hangover",
+      "group": "false-friend",
+      "note": "Robert et Louise (over the fire) and Shoji (sando over the burger) match because over is contained in hangover.",
+      "forbid": ["Robert et Louise", "Shoji"]
+    },
+    {
+      "id": "false-friend-korean-bbq",
+      "query": "korean bbq",
+      "group": "false-friend",
+      "note": "Stateline Road Smokehouse is Napa barbecue, not Korean. Sharing the bbq tag should not put it in the Korean BBQ candidate list.",
+      "forbid": ["Stateline Road Smokehouse"]
+    },
+    {
+      "id": "false-friend-best-falafel",
+      "query": "best falafel",
+      "group": "false-friend",
+      "note": "Mamahuhu does not serve falafel. The word best occurs twice in its take, and each note-word contained in the query adds a point.",
+      "forbid": ["Mamahuhu"]
+    },
+    {
+      "id": "false-friend-burger",
+      "query": "burger",
+      "group": "false-friend",
+      "note": "No note recommends a burger. Shoji mentions one only to say get the chicken sando instead. The empty state is the honest result.",
+      "expect_empty": true
+    },
+    {
+      "id": "conj-pasta-london",
+      "query": "pasta in london",
+      "group": "conjunction",
+      "note": "Padella is London pasta and should rank first, with every candidate actually in London.",
+      "hit_at_1": ["Padella"],
+      "cities": ["London"]
+    },
+    {
+      "id": "conj-eggs-london",
+      "query": "eggs london",
+      "group": "conjunction",
+      "note": "The Wolseley is the London egg note and should rank first, with every candidate in London.",
+      "hit_at_1": ["The Wolseley"],
+      "cities": ["London"]
+    },
+    {
+      "id": "conj-brisket-napa",
+      "query": "brisket napa",
+      "group": "conjunction",
+      "note": "Stateline's burnt-ends and brisket note is the Napa hit, and it should be the only candidate.",
+      "exact_set": ["Stateline Road Smokehouse"]
+    },
+    {
+      "id": "conj-napa-bbq",
+      "query": "Napa BBQ",
+      "group": "conjunction",
+      "note": "Stateline Road Smokehouse should rank first for Napa BBQ.",
+      "hit_at_1": ["Stateline Road Smokehouse"]
+    },
+    {
+      "id": "conj-cheap-coffee-top",
+      "query": "cheap coffee in menlo park",
+      "group": "conjunction",
+      "note": "Saint Frank Coffee is the Menlo Park coffee note and should rank first.",
+      "hit_at_1": ["Saint Frank Coffee"]
+    },
+    {
+      "id": "conj-bagel-queens-top",
+      "query": "bagel in queens",
+      "group": "conjunction",
+      "note": "Michael's Bagels is the Queens bagel and should rank first.",
+      "hit_at_1": ["Michael's Bagels"]
+    },
+    {
+      "id": "conj-steak-paris-top",
+      "query": "steak in paris",
+      "group": "conjunction",
+      "note": "Robert et Louise is the Paris steak and should rank first.",
+      "hit_at_1": ["Robert et Louise"]
+    },
+    {
+      "id": "conj-matcha-cappuccino",
+      "query": "matcha cappuccino",
+      "group": "conjunction",
+      "note": "Breadbelly's note is a matcha cappuccino and should rank first.",
+      "hit_at_1": ["Breadbelly"]
+    },
+    {
+      "id": "conj-natural-wine",
+      "query": "natural wine",
+      "group": "conjunction",
+      "note": "Valley Bar & Bottle is tagged natural-wine and should be a candidate.",
+      "include": ["Valley Bar & Bottle"]
+    },
+    {
+      "id": "conj-cheap-pizza",
+      "query": "cheap pizza",
+      "group": "conjunction",
+      "note": "Jules is the only pizza spot. The cheap bonus promotes $ spots that are not pizza and the top-3 cutoff drops Jules.",
+      "include": ["Jules"]
+    },
+    {
+      "id": "conj-pizza-london",
+      "query": "pizza in london",
+      "group": "conjunction",
+      "note": "There is no pizza in London. The UI empty state is the graceful fallback. Token overlap otherwise returns SF pizza and London spots that are not pizza.",
+      "expect_empty": true
+    },
+    {
+      "id": "conj-fancy-steak",
+      "query": "fancy steak",
+      "group": "conjunction",
+      "note": "Rank 1 should be a steak spot: Goodtime Bar or Robert et Louise. The fancy tier bonus instead promotes the $$$ spots, and none of those notes are a steakhouse.",
+      "hit_at_1": ["Goodtime Bar", "Robert et Louise"]
+    },
+    {
+      "id": "conj-mission",
+      "query": "Mission",
+      "group": "conjunction",
+      "note": "San Ho Won, Rintaro, and Pasta Supply Co are in the Mission. Mamahuhu is in Palo Alto and only mentions Mission Chinese as a craving, but that tie plus notebook order puts it first.",
+      "hit_at_1": ["San Ho Won", "Rintaro", "Pasta Supply Co"]
+    },
+    {
+      "id": "conj-cheap-coffee-city",
+      "query": "cheap coffee in menlo park",
+      "group": "conjunction",
+      "note": "Every candidate should be in Menlo Park. Padella is London pasta and still rides the cheap bonus into the top 3.",
+      "cities": ["Menlo Park"]
+    },
+    {
+      "id": "conj-bagel-queens-city",
+      "query": "bagel in queens",
+      "group": "conjunction",
+      "note": "Every candidate should be the Queens bagel note. Café Brusco is in Berkeley.",
+      "cities": ["Queens, NYC"]
+    },
+    {
+      "id": "conj-steak-paris-city",
+      "query": "steak in paris",
+      "group": "conjunction",
+      "note": "Every candidate should be in Paris. Goodtime Bar is a San Jose steak.",
+      "cities": ["Paris"]
+    },
+    {
+      "id": "price-broke",
+      "query": "broke",
+      "group": "price",
+      "note": "broke is one of the cheap synonyms and should not return a $$$ spot.",
+      "max_tier": 2
+    },
+    {
+      "id": "price-upscale",
+      "query": "upscale",
+      "group": "price",
+      "note": "upscale applies the splurge tier bonus. Every candidate should be $$$.",
+      "min_tier": 3
+    },
+    {
+      "id": "price-baller-dinner",
+      "query": "baller dinner",
+      "group": "price",
+      "note": "baller applies the splurge tier bonus. Every candidate should be $$$.",
+      "min_tier": 3
+    },
+    {
+      "id": "price-splurge",
+      "query": "splurge",
+      "group": "price",
+      "note": "splurge applies the tier bonus. Every candidate should be $$$.",
+      "min_tier": 3
+    },
+    {
+      "id": "syn-romantic",
+      "query": "romantic",
+      "group": "synonym",
+      "note": "romantic is a date synonym. Every candidate should be tagged date.",
+      "require_tag": "date"
+    },
+    {
+      "id": "syn-date-night",
+      "query": "date night",
+      "group": "synonym",
+      "note": "This is a surprise-me string. Every candidate should be tagged date.",
+      "require_tag": "date"
+    },
+    {
+      "id": "syn-veggie",
+      "query": "veggie",
+      "group": "synonym",
+      "note": "veggie is a vegetarian synonym and should return the three vegetarian notes.",
+      "exact_set": ["Bubbelah", "Loquat Bakery", "Zorek"]
+    },
+    {
+      "id": "syn-vegan",
+      "query": "vegan",
+      "group": "synonym",
+      "note": "The ranker has no vegan tag. Surfacing the vegetarian notes is the fair retrieval. The writer must not upgrade them to vegan; that is graded separately when a key is set.",
+      "require_tag": "veg"
+    },
+    {
+      "id": "syn-espresso",
+      "query": "espresso",
+      "group": "synonym",
+      "note": "espresso is a coffee synonym. Saint Frank, the spot tagged espresso, should rank first.",
+      "hit_at_1": ["Saint Frank Coffee"]
+    },
+    {
+      "id": "syn-latte",
+      "query": "latte",
+      "group": "synonym",
+      "note": "The Little Store's note recommends the rose latte, so it should rank first.",
+      "hit_at_1": ["The Little Store"]
+    },
+    {
+      "id": "ood-tokyo",
+      "query": "Tokyo",
+      "group": "out-of-notebook",
+      "note": "No Tokyo notes. The UI should show the empty state and never ask Claude to invent a restaurant.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-chicago",
+      "query": "Chicago",
+      "group": "out-of-notebook",
+      "note": "No Chicago notes.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-seattle",
+      "query": "Seattle",
+      "group": "out-of-notebook",
+      "note": "No Seattle notes.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-los-angeles",
+      "query": "Los Angeles",
+      "group": "out-of-notebook",
+      "note": "No Los Angeles notes.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-ramen",
+      "query": "ramen",
+      "group": "out-of-notebook",
+      "note": "No ramen note. An izakaya is not a ramen shop.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-sushi",
+      "query": "sushi",
+      "group": "out-of-notebook",
+      "note": "No sushi note.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-dim-sum",
+      "query": "dim sum",
+      "group": "out-of-notebook",
+      "note": "No dim sum note. Cantonese dinner is not the same request.",
+      "expect_empty": true
+    },
+    {
+      "id": "ood-tacos",
+      "query": "tacos",
+      "group": "out-of-notebook",
+      "note": "No taco note.",
+      "expect_empty": true
+    }
+  ]
+}
