@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "pizza",
+      "query": "pizza",
+      "judge_extra": "Grade the blurb against the notes only. Press-review dish names that are not in the notes are unsupported."
+    },
+    {
+      "id": "matcha",
+      "query": "matcha",
+      "judge_extra": "The blurb should be about the matcha note it was given, not a generic coffee shop."
+    },
+    {
+      "id": "paris",
+      "query": "Paris",
+      "judge_extra": "The spot it names must stay in the city written in its note. Do not move a Paris spot to the Bay Area or a Bay Area spot to Paris."
+    },
+    {
+      "id": "vegan-falafel",
+      "query": "vegan falafel",
+      "judge_extra": "The notes describe vegetarian food. Calling a dish vegan is an unsupported claim unless a note says vegan. Recommending the falafel without that upgrade is fine. Saying the notes do not say vegan is fine."
+    },
+    {
+      "id": "cheap-pizza",
+      "query": "cheap pizza",
+      "allow_refusal": true,
+      "judge_extra": "Fail if the blurb calls a restaurant a pizza place or says it serves pizza unless that restaurant's notes say pizza. Describing a non-pizza spot honestly, or saying these notes do not have pizza, is acceptable. Refusal is acceptable."
+    },
+    {
+      "id": "tokyo-unrelated-spot",
+      "query": "ramen in Tokyo",
+      "names": ["Jules"],
+      "allow_refusal": true,
+      "judge_extra": "The only note is Jules, a pizza spot in SF. The blurb must not place Jules in Tokyo and must not invent a Tokyo or ramen restaurant. Recommending Jules as SF pizza, saying the notes have no Tokyo ramen, or refusing are all acceptable."
+    }
+  ]
+}
