@@ -1,5 +1,9 @@
-// J(AI) frontend: ranks Jay's notes locally as you type, then asks the
+// E.A.T. ranks the notebook in the browser as you type, then asks the
 // server for a written pick from the top matches.
+//
+// score() matches whole tokens, not substrings. SF and San Francisco are
+// one city, and NYC and New York are one city. A stacked query (cheap pizza,
+// steak in Paris) has to satisfy every constraint.
 
 let SPOTS = [], REVIEWS = {}, OUTLET_STYLE = {}, CHIPS = [], SURPRISES = [];
 
@@ -21,24 +25,133 @@ function renderChips(){
   });
 }
 
+const STOP = new Set(["a","an","the","for","in","on","at","and","or","with","to","of","me","my","it"]);
+const CHEAP_WORDS = ["cheap","budget","broke"];
+const SPLURGE_WORDS = ["splurge","fancy","baller","upscale"];
+const SYN = {
+  coffee: ["coffee","cafe","latte","espresso"],
+  cheap: ["cheap","broke","budget"],
+  date: ["date","romantic"],
+  hangover: ["hangover","greasy","cure"],
+  breakfast: ["breakfast","brunch","morning"],
+  veg: ["vegetarian","veggie","veg","vegan"],
+  splurge: ["splurge","fancy","treat","baller"]
+};
+
+function fold(value){
+  return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function tokenize(value){
+  return fold(value).split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+function hasWord(text, word){
+  return new RegExp("\\b" + word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b").test(fold(text));
+}
+
+function canonicalCity(phrase){
+  const p = fold(phrase).replace(/[^a-z0-9]+/g, " ").trim();
+  if(p === "sf" || p === "san francisco") return "sf";
+  if(p === "nyc" || p === "new york" || p === "new york city") return "nyc";
+  return p;
+}
+
+function cityPhrases(){
+  const phrases = new Map();
+  function add(phrase){
+    const text = fold(phrase).replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+    if(text) phrases.set(text, canonicalCity(text));
+  }
+  SPOTS.forEach(spot => {
+    add(spot.city);
+    fold(spot.city).split(",").forEach(add);
+  });
+  add("san francisco");
+  add("new york");
+  add("new york city");
+  return [...phrases.entries()].sort((a, b) => b[0].length - a[0].length);
+}
+
+function spotCityKeys(spot){
+  const keys = new Set();
+  fold(spot.city).split(",").forEach(part => {
+    const text = part.trim();
+    if(!text) return;
+    keys.add(text);
+    keys.add(canonicalCity(text));
+  });
+  if(keys.has("sf")) keys.add("sf");
+  if(keys.has("nyc") || fold(spot.city).includes("nyc")) keys.add("nyc");
+  return keys;
+}
+
+function tagMatchesToken(tag, token){
+  return tokenize(tag).some(part => {
+    if(part === token) return true;
+    // Plurals (cocktail / cocktails) and a short typed prefix (piz / pizza).
+    // The leftover has to be tiny so "cheap" does not match "cheesecake".
+    return token.length >= 3 && part.startsWith(token) && part.length > token.length && part.length - token.length <= 2;
+  });
+}
+
+function tagHasKey(tag, key){
+  return tokenize(tag).some(part => part === key || (key.length >= 3 && part.startsWith(key) && part.length > key.length));
+}
+
+function synonymKeys(token){
+  return Object.keys(SYN).filter(key => SYN[key].includes(token));
+}
+
+// Tags, name, neighborhood, city, category, and the "get" line. The freeform
+// take is not searched: it mentions dishes the note tells you to skip.
+function topicWeight(spot, token){
+  let w = 0;
+  if(spot.tags.some(tag => tagMatchesToken(tag, token))) w += 6;
+  if(tokenize(spot.name).includes(token)) w += 4;
+  if(tokenize(spot.hood).includes(token)) w += 4;
+  if(tokenize(spot.city).includes(token)) w += 3;
+  if(tokenize(spot.cat).includes(token)) w += 2;
+  if(spot.get && tokenize(spot.get).includes(token)) w += 3;
+  if(synonymKeys(token).some(key => spot.tags.some(tag => tagHasKey(tag, key)))) w += 2;
+  return w;
+}
+
+function parseQuery(q){
+  const text = fold(q).replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+  const padded = " " + text + " ";
+  let city = null;
+  let consumed = [];
+  for(const [phrase, key] of cityPhrases()){
+    if(padded.includes(" " + phrase + " ")){
+      city = key;
+      consumed = phrase.split(" ");
+      break;
+    }
+  }
+  let price = null;
+  if(CHEAP_WORDS.some(word => hasWord(text, word))) price = "cheap";
+  if(SPLURGE_WORDS.some(word => hasWord(text, word))) price = "splurge";
+  const skip = new Set([...STOP, ...consumed, ...CHEAP_WORDS, ...SPLURGE_WORDS]);
+  const topics = tokenize(text).filter(token => !skip.has(token) && SPOTS.some(spot => topicWeight(spot, token) > 0));
+  return {city, price, topics};
+}
+
 function score(spot, q){
   if(!q) return Math.random();
-  const ql = q.toLowerCase();
+  const parsed = parseQuery(q);
+  if(parsed.city && !spotCityKeys(spot).has(parsed.city)) return 0;
+  if(parsed.topics.some(token => topicWeight(spot, token) === 0)) return 0;
+
   let s = 0;
-  spot.tags.forEach(t => { if(t === ql || ql.includes(t) || (ql.length >= 3 && t.startsWith(ql))) s += 3; });
-  [spot.name, spot.city, spot.hood, spot.cat, spot.take].forEach(f => {
-    f.toLowerCase().split(/[^a-z]+/).forEach(w => {
-      if(w.length > 3 && ql.includes(w)) s += 1;
-    });
-  });
-  // craving synonyms
-  const syn = {coffee:["coffee","cafe","latte","espresso"], cheap:["cheap","broke","budget"],
-    date:["date","romantic"], hangover:["hangover","greasy","cure"], breakfast:["breakfast","brunch","morning"],
-    veg:["vegetarian","veggie","veg"], splurge:["splurge","fancy","treat","baller"]};
-  Object.keys(syn).forEach(k => { if(syn[k].some(w => ql.includes(w))) spot.tags.forEach(t=>{ if(t.includes(k)) s+=2; }); });
-  const tier = (spot.price.match(/^\$+/) || [""])[0].length;
-  if(/\b(splurge|fancy|baller|upscale)\b/.test(ql)) s += (tier >= 3 ? 4 : -5);
-  if(/\b(cheap|budget|broke)\b/.test(ql)) s += (tier <= 1 ? 3 : (tier >= 3 ? -5 : 0));
+  if(parsed.city) s += 4;
+  parsed.topics.forEach(token => { s += topicWeight(spot, token); });
+  const tier = (String(spot.price).match(/^\$+/) || [""])[0].length;
+  if(parsed.price === "splurge") s += (tier >= 3 ? 4 : -5);
+  if(parsed.price === "cheap") s += (tier <= 1 ? 3 : (tier >= 3 ? -5 : 0));
+  // A spot that already met every stacked constraint stays in the list.
+  // The price tweak reorders it. It does not throw the only pizza out.
+  if((parsed.city || parsed.topics.length) && s <= 0) s = 1;
   return s;
 }
 

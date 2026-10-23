@@ -1,11 +1,11 @@
-# J(AI) evals
+# E.A.T. evals
 
 These grade two different things:
 
 1. **Retrieval.** As you type, `static/app.js` ranks Jay's notes in the browser (`score` and `pick`) and keeps at most three spots. The eval loads that file and runs those functions. It does not reimplement them.
 2. **The blurb.** `POST /api/pick` turns those names into notes and asks Claude for 2 to 3 sentences. Format and "did you name a real spot from the notes" are checked with string rules. Whether the sentences are actually true to the notes is a second Claude call, and it runs only when `ANTHROPIC_API_KEY` is set.
 
-Nothing under `app.py`, `static/`, `data/`, or the Render config is modified. The ranker has gaps. The labeled cases that catch them fail on purpose. A failing quality case means that label missed.
+Nothing under `app.py`, `static/`, `data/`, or the Render config is modified by the test run. A failing quality case means the ranker missed that label. `evals/baseline.json` is the pass count from a real run. The baseline test fails the build if a later change drops a group's passes, drops the overall pass count, or deletes a labeled case.
 
 ## Run
 
@@ -17,7 +17,7 @@ python3 -m venv .venv
 .venv/bin/python -m evals
 ```
 
-That is the whole offline suite. It does not call Anthropic. At the bottom, pytest prints a retrieval scoreboard: passed and failed labels by group, then one line per miss. The scoreboard is the full golden file, including when pytest was filtered with `-k` or `-m`.
+That is the whole offline suite. It does not call Anthropic. At the bottom, pytest prints the E.A.T. retrieval scoreboard: passed and failed labels by group, then one line per miss. The scoreboard is the full golden file, including when pytest was filtered with `-k` or `-m`.
 
 Live blurb graders run in the same command when `ANTHROPIC_API_KEY` is set. They call the real `/api/pick` route and then a judge, so they spend credits. To keep them off even if a key is present:
 
@@ -56,11 +56,11 @@ The scoreboard counts labels, not a smoothed percentage. Do not treat a forbid-c
 
 Groups in the scoreboard:
 
-- **chip, cuisine, city, price, synonym, conjunction** cover the craving chips, single-topic queries, cities, and queries that stack a constraint (cheap pizza, steak in Paris).
-- **false-friend** is substring damage. Tag hits use `query.includes(tag)` with no word boundary (`tea` inside `steak`, `cheap` inside `cheesecake`). Note-words use the same containment (`past` inside `pastrami`, `over` inside `hangover`, `best` inside a take that is not about the craving).
+- **chip, cuisine, city, price, synonym, conjunction** cover the craving chips, single-topic queries, cities, and queries that stack a constraint (cheap pizza, steak in Paris). A stacked query has to satisfy every constraint: city, price, and each food word.
+- **false-friend** guards whole-token matching. A tag or note word counts when it is the whole token, so `tea` does not match `steak`, `cheap` does not match `cheesecake`, and `past` does not match `pastrami`.
 - **out-of-notebook** is the graceful fallback: Tokyo, ramen, tacos, and other cravings with no note should return no spots.
 
-The city string for San Francisco spots is `SF`. `NYC` matches because Michael's Bagels has an `nyc` tag. `SF` and `San Francisco` do not, and the word scorer ignores tokens of length 3 or less. Those labels are supposed to return SF spots. If they fail, that is the finding.
+San Francisco spots are stored as city `SF`. The ranker treats `SF` and `San Francisco` as that city, and `NYC` and `New York` as the same city as `Queens, NYC`. Those labels require SF spots and Michael's Bagels. A miss is a regression.
 
 ## Live blurbs
 

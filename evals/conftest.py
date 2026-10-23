@@ -61,13 +61,17 @@ def world():
 
 
 def pytest_terminal_summary(terminalreporter, exitstatus, config):
-    terminalreporter.write_sep("=", "J(AI) retrieval scoreboard")
+    terminalreporter.write_sep("=", "E.A.T. retrieval scoreboard")
     try:
         spots = load_spots()
         by_name = {spot["name"]: spot for spot in spots}
         cases = load_cases()
         batch = rank_queries([case["query"] for case in cases])
         grades = grade_all(cases, batch.by_query, by_name)
-        terminalreporter.write_line(format_scoreboard(grades))
+        text = format_scoreboard(grades)
+        terminalreporter.write_line(text)
+        scoreboard_path = os.environ.get("EAT_SCOREBOARD_PATH")
+        if scoreboard_path:
+            Path(scoreboard_path).write_text(text + "\n")
     except Exception as exc:
         terminalreporter.write_line(f"scoreboard unavailable: {exc}")
