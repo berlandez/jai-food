@@ -1,11 +1,12 @@
-name: evals
+name: E.A.T. evals
 
 on:
   push:
   pull_request:
 
 jobs:
-  offline:
+  eat-retrieval:
+    name: E.A.T. retrieval scoreboard
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,5 +18,13 @@ jobs:
           node-version: "22"
       - name: Install eval dependencies
         run: python -m pip install -r evals/requirements.txt
-      - name: Run offline evals
-        run: python -m evals
+      - name: Run E.A.T. offline evals
+        run: |
+          set -o pipefail
+          python -m evals | tee scoreboard.txt
+      - name: Publish E.A.T. scoreboard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eat-retrieval-scoreboard
+          path: scoreboard.txt

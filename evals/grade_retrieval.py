@@ -171,7 +171,7 @@ def format_scoreboard(grades):
         passed, total = by_group.get(grade.group, (0, 0))
         by_group[grade.group] = (passed + int(grade.ok), total + 1)
     passed = sum(1 for grade in grades if grade.ok)
-    lines = [f"Retrieval labels: {passed} passed, {len(grades) - passed} failed, {len(grades)} total"]
+    lines = [f"E.A.T. retrieval: {passed} passed, {len(grades) - passed} failed, {len(grades)} total"]
     for group in sorted(by_group):
         got, total = by_group[group]
         lines.append(f"  {group:<16} {got}/{total}")
