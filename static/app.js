@@ -224,7 +224,7 @@ async function fetchPick(q){
   if(pickAbort) pickAbort.abort();
   pickAbort = new AbortController();
   removeTopPick();
-  results.insertBefore(el("div","pickloading","J(AI) is writing a pick..."), results.firstChild);
+  results.insertBefore(el("div","pickloading","E.A.T. is writing a pick..."), results.firstChild);
   let ai = null;
   try{
     const res = await fetch("/api/pick", {
