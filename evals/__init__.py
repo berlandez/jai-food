@@ -1,1 +1,1 @@
-"""Offline and optional live evals for J(AI). Run with `python -m evals`."""
+"""Offline and optional live evals for E.A.T. Run with `python -m evals`."""

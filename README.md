@@ -1,4 +1,4 @@
-# J(AI)
+# E.A.T.
 
 Tell it what you're craving; it sends you where Jay would actually go.
 
