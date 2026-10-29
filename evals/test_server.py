@@ -92,7 +92,7 @@ def test_data_route_serves_the_notebook_files(client):
 def test_index_serves_the_page(client):
     response = client.get("/")
     assert response.status_code == 200
-    assert b"J(AI)" in response.data
+    assert b"E.A.T." in response.data
 
 
 def test_missing_craving_or_unknown_names_are_rejected(client, fake):

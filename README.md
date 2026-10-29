@@ -1,6 +1,6 @@
-# J(AI)
+# E.A.T.
 
-Tell it what you're craving; it sends you where Jay would actually go.
+E.A.T. stands for Expertise, Authoritativeness, and Trustworthiness. Tell it what you're craving; it sends you where Jay would actually go.
 
 Every recommendation comes from Jay's own restaurant notes (30 spots across the Bay Area, NYC, Paris, and London), with press and critic reviews attached. As you type, the app ranks the notebook instantly in the browser, then Claude writes a short "Jay's Take" in Jay's voice, grounded only in those notes.
 

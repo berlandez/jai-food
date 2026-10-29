@@ -61,7 +61,7 @@ def world():
 
 
 def pytest_terminal_summary(terminalreporter, exitstatus, config):
-    terminalreporter.write_sep("=", "J(AI) retrieval scoreboard")
+    terminalreporter.write_sep("=", "E.A.T. retrieval scoreboard")
     try:
         spots = load_spots()
         by_name = {spot["name"]: spot for spot in spots}
