@@ -1,4 +1,4 @@
-# J(AI) evals
+# E.A.T. evals
 
 These grade two different things:
 

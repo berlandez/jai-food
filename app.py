@@ -1,4 +1,4 @@
-"""J(AI): craving in, Jay's restaurant pick out.
+"""E.A.T.: craving in, Jay's restaurant pick out.
 
 Serves the static UI and one API route that asks Claude to write a pick
 from Jay's own notes. Search/ranking runs in the browser; the server only
@@ -107,7 +107,7 @@ def pick():
         _cache.move_to_end(key)
         return jsonify(text=_cache[key])
     if over_limit(request.remote_addr or "?"):
-        return jsonify(error="J(AI) needs a breather, try again later"), 429
+        return jsonify(error="E.A.T. needs a breather, try again later"), 429
 
     prompt = (f'The reader asked for: "{q}"\n\nYour notes on the candidate spots:\n\n'
               + "\n\n".join(notes_for(s) for s in spots))

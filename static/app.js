@@ -1,4 +1,4 @@
-// J(AI) frontend: ranks Jay's notes locally as you type, then asks the
+// E.A.T. frontend: ranks Jay's notes locally as you type, then asks the
 // server for a written pick from the top matches.
 
 let SPOTS = [], REVIEWS = {}, OUTLET_STYLE = {}, CHIPS = [], SURPRISES = [];
@@ -111,7 +111,7 @@ async function fetchPick(q){
   if(pickAbort) pickAbort.abort();
   pickAbort = new AbortController();
   removeTopPick();
-  results.insertBefore(el("div","pickloading","J(AI) is writing a pick..."), results.firstChild);
+  results.insertBefore(el("div","pickloading","E.A.T. is writing a pick..."), results.firstChild);
   let ai = null;
   try{
     const res = await fetch("/api/pick", {
